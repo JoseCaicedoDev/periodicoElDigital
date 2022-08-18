@@ -70,7 +70,7 @@ li{
   text-align: -webkit-center;
 }
 .card{
-  max-width: 600px;
+/*   max-width: 600px; */
   padding: 0 10px;
 }
 .card-content, .card-details{
@@ -113,8 +113,6 @@ li{
   color: var(--font);
   margin: 0 0 15px;
 }
-
-
 footer{
   border-top: 2px solid #c7c7c7;
   padding: 0 10px;
@@ -146,11 +144,9 @@ footer p{
   padding: 15px 0;
 }
 
-
-
 @media (min-width: 650px ) {
-.header p {
-  display: inline;
+  .header p {
+    display: inline;
     position: absolute;
     bottom: 0;
     left: 10px;
@@ -158,8 +154,7 @@ footer p{
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
-  }
-
+    }
   .header ul {
     display: flex;
     position: absolute;
@@ -167,9 +162,27 @@ footer p{
     right: 0;
     margin-bottom: 5px;
   }
-
+  .banner p{
+    margin-left: 15px;
+  }
+  .container{
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .card{
+    height: 250px;
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .card-content{
+    width: 45%;
+  }
 .card-details {
-  width: 60%;
+  width: 55%;
   text-align: center;
   padding: 0 30px;
   display: flex;
@@ -183,10 +196,6 @@ footer p{
     outline: 1px solid red;
     padding: 0 15px;
   } */
-  .card-content{
-    outline: 1px solid blue;
-  }
-
     /* .container{
       width: 1024px;
       margin: 0 auto;
