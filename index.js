@@ -47,8 +47,33 @@ const MESES = [
 const DIAS = [
   "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"];
 
-  fechaBanner.textContent = `${DIAS[fechaActual.getDay()]}, ${MESES[fechaActual.getMonth()]} ${fechaActual.getDate()}, ${fechaActual.getUTCFullYear()}`
+fechaBanner.textContent = `${DIAS[fechaActual.getDay()]}, ${MESES[fechaActual.getMonth()]} ${fechaActual.getDate()}, ${fechaActual.getUTCFullYear()}`
 
+// Noticia Banner
+const newsBanner = document.querySelector('.banner-new')
+
+let contador = 0;
+
+window.onload = function () {
+  cambiarNoticia();
+}
+cambiarNoticia = function () {
+  if (contador == noticias.length) {
+    contador = 0;
+  }
+  const newsBanner = document.querySelector('.banner-new')
+  newsBanner.textContent = noticias[contador].titulo
+  contador++;
+  setTimeout(cambiarNoticia, 4000);
+}
+
+/* for (const newB of noticias) {
+  setTimeout ( () =>{
+    newsBanner.textContent = newB.titulo
+  },2000)
+
+}
+ */
 // Noticia
 for (const news of noticias) {
   const container = document.querySelector('.container')
